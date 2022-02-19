@@ -27,30 +27,4 @@ export class AppComponent implements OnInit {
       this.isFileLoaded = true;
     });
   }
-  
-  public getIconBasedOnMimeType(file: any): string {
-
-    console.log('function called');
-    
-
-    let mimeType: string | null = (file.mimeType) ? file.mimeType : null;
-
-    if (mimeType && mimeType.indexOf('/') > 0) {
-
-      switch (mimeType.split('/')[0]) {
-        case 'image':
-          return 'image.svg';
-        case 'audio':
-          return 'audio.svg';
-        case 'video':
-          return 'video.svg';
-        case 'text':
-          return 'txt.svg';
-        default:
-          return 'application.svg';
-      }
-    } else {
-      return 'application.svg';
-    }
-  }
 }

@@ -1,7 +1,7 @@
 <div class="app_container">
   <div *ngIf="isFileLoaded" class="file_card">
     <div class="file_icon">
-      <img [src]="'assets/images/' + getIconBasedOnMimeType(fileData)">
+      <img [src]="'assets/images/' + (fileData | icon)">
     </div>
     <div class="file_info">
       <div class="file_name">
