@@ -1,0 +1,19 @@
+<div class="app_container">
+  <div *ngIf="isFileLoaded" class="file_card">
+    <div class="file_icon">
+      <img [src]="'assets/images/' + getIconBasedOnMimeType(fileData)">
+    </div>
+    <div class="file_info">
+      <div class="file_name">
+        {{fileData?.name}}{{fileData?.extension}}
+      </div>
+      <div class="file_size">
+        {{fileData?.size}}
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!isFileLoaded">
+    Loading...
+  </div>
+</div>
